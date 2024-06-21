@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagína de Login</title>
+    <link rel="stylesheet" href="styleslogin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle-dark-mode">
+            <label for="toggle-dark-mode" class="toggle-label">
+                Modo Escuro
+            </label>
+        </div>
+        <div class="login-card">
+            <div class="login-info">
+                <h2>Bem vindo ao Estoque Nexus! </h2>
+                <p>Por favor coloque os dados necessários para voltar a organização. </p>
+            </div>
+            <div class="login-form">
+                <h2>Login</h2>
+                <form>
+                    <div class="textbox">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Senha" required
+                        minlength="6"
+                        maxlength="16"
+                        size="16">
+                        <p> <em><u><a href="senha.html" target="_blank">Esqueci a Senha</a></u> </em></p>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p> <em><u><a href="Inscrição.html" target="_blank">Não possui uma conta? inscreva-se </a></u> </em></p>
+            </div>
+        </div>
+    </div>
+    <script src="scriptlogin.js"></script>
+</body>
+</html>

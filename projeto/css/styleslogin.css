@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #ffffff;
+    --background-color: #f0f0f0;
+    --text-color: #000000;
+    --button-background: #18A8C3; 
+    --button-text: #ffffff;
+}
+
+body.dark-mode {
+    --primary-color: #333333;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-background: #666666;
+    --button-text: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-label {
+    cursor: pointer;
+    background: var(--button-background);
+    color: var(--button-text);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login-card {
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.login-info {
+    padding: 20px;
+    border-right: 2px solid var(--background-color);
+    flex: 1;
+}
+
+.login-form {
+    padding: 20px;
+    flex: 1;
+}
+
+.login-info h2, .login-form h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+}
+
+.login-info p {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.textbox {
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    background: none;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.btn {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: darken(var(--button-background),10%);
+}

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+
+}
+
+header{
+    background-color: #18A8C3;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    padding-bottom: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    color: #fff;
+}
+.card {
+    margin: 4% auto;
+    text-decoration: solid;
+    height: 100%;
+    font-size: larger;
+    background-color: #edf9f0;
+    display: inline-block; 
+    align-items: center;
+    margin-left: 5px;
+  }
+
+
+.nav-list{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item{
+    margin: 0 15px;
+
+
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.20rem;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+
+.login-button button{
+    border: none;
+    background-color: #F5F5F5;
+    padding: 10px 15px;
+    border-radius: 5px;
+
+}
+
+.login-button button a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon{
+    display:none;
+}
+
+.mobile-menu{
+    display:none;
+}
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 2px black;
+    display: none;
+    background-color: #c5b8b8;
+    border: 2px black;
+    
+
+}
+.dropdown-menu a{
+    display: block;
+
+}
+nav li a {
+    display: inline-block;
+    padding: 15px;
+    
+}
+
+.nav-item:hover .dropdown-menu{
+    display: block;
+
+}
+.bloco{
+    display: inline-block;
+    padding: 10rem 40% ;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-text{
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: bold;
+    
+} 
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3rem;
+    margin-left: 9rem;
+    margin-right: 8rem;
+    color: #043741;
+}
+.card-img-top{
+    padding-top: 10px;
+}
+
+.card{
+    margin-left: 5rem;
+}
+
+
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item{
+        display: none;
+    }
+    .login-button{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block
+    }
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul{
+        display: flex;
+        text-align: center;
+        padding-bottom: 1rem;
+        flex-direction: column;
+
+    }
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button{
+        display: block;
+        padding-top: 1rem 2rem;
+    }
+    .mobile-menu .login-button button{
+        width: 100%;
+    }
+    .open{
+        display: block;
+    }
+    .card{
+        margin-left: 7rem;
+    }
+    h1{
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
+}

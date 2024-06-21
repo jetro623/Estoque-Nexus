@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+
+}
+
+header{
+    background-color: #007d8a;
+    box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    padding-bottom: 10px;
+}
+
+.footer-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    padding-bottom: 10px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    color: #fff;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.card {
+    width: 15rem;
+    height: 22rem;
+    background-color: rgb(245, 242, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vh;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.card h2 {
+    color: #007d8a;
+    margin-top: 1rem;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item{
+    margin: 0 15px;
+
+
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.20rem;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+.login-button button{
+    border: none;
+    background-color: #F5F5F5;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.login-button button a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon{
+    display:none;
+}
+
+.mobile-menu{
+    display:none;
+}
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 2px black;
+    display: none;
+    background-color: #c5b8b8;
+    border: 2px black;
+}
+
+.dropdown-menu a{
+    display: block;
+
+}
+nav li a {
+    display: inline-block;
+    padding: 15px;
+}
+
+.nav-item:hover .dropdown-menu{
+    display: block;
+}
+.bloco{
+    display: inline-block;
+    padding: 10rem 40%;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-text{
+    padding-bottom: 30px;
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+h2{
+    font-size: 25px;
+    font-weight: bold;
+} 
+h1{
+    font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3rem;
+    margin-left: 9rem;
+    margin-right: 8rem;
+    margin-bottom: 20px;
+    color: #007d8a;
+}
+.card-img-top{
+    padding-top: 10px;
+}
+
+.card-texto{
+    text-align: center;
+    padding: 10px;
+}
+.card-title{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.main-footer{
+    background-color: #007d8a;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.dropdown-menu a:hover {
+    background-color: #005f6a;
+    color: #fff;
+}
+
+.content button:hover {
+    background-color: #005f6a;
+    color: white;
+}
+
+.button-group button:hover {
+    background-color: #005f6a;
+    color: white;
+}
+
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item{
+        display: none;
+    }
+    .login-button{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block
+    }
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul{
+        display: flex;
+        text-align: center;
+        padding-bottom: 1rem;
+        flex-direction: column;
+    }
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button{
+        display: block;
+        padding-top: 1rem 2rem;
+    }
+    .mobile-menu .login-button button{
+        width: 100%;
+    }
+    .open{
+        display: block;
+    }
+    .card{
+        margin-left: 7rem;
+    }
+    h1{
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img/logo2.png" alt="" style="width: 150px; height: 40px;">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"> <a href="" class="nav-link">Cadastro</a>
+                    <div class="dropdown-menu">
+                         <a href="produtosemcadastro.html" class="nav-link">Produtos</a>
+                         <a href="clientesemcadastro.html" class="nav-link">Clientes <br>e Fornecedores</a>
+                     </div>
+                    </li>
+                    <li class="nav-item"> <a href="#" class="nav-link">Controle</a>
+                        <div class="dropdown-menu">
+                            <a href="controledeestoque.html" class="nav-link">Estoque</a>
+                            <a href="controledecaixa.html" class="nav-link">Caixa</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"> <a href="caixa.html" class="nav-link"> Fluxo de Caixa</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="login.html">Entrar</a></button>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+             <ul>
+                    <li class="nav-item"> <a href="produtosemcadastro.html" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"> <a href="clientesemcadastro.html" class="nav-link">Clientes e Fornecedores </a></li>
+                    <li class="nav-item"> <a href="caixa.html" class="nav-link">Fluxo de caixa</a></li>
+                    <li class="nav-item"> <a href="controledeestoque.html" class="nav-link">Controle de estoque</a></li>
+                    <li class="nav-item"> <a href="controledeestoque.html" class="nav-link">Controle de caixa</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="login.html">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h1>GERENCIE PROCESSOS, OTIMIZE RECURSOS <br>E GARANTA A EXECUÇÃO EFICIENTE DE <br>TODAS AS ATIVIDADES DO SEU COMÉRCIO</h1>
+        <p style="text-align: center; font-weight: 300; font-size: 20px;">O Estoque Nexus vai ajudá-lo a lidar com os volumes de processos envolvidos na gestão de <br> uma empresa comercial. Assuma o controle sobre a entrada e saída de produtos, gerenciamento <br>do estoque e caixa, custos e lucros.</p>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/gestao-de-caixa.png" alt="Vendas">
+                <h2>Vendas</h2>
+                <p>Para organizar suas vendas e a equipe comercial</p>
+            </div>
+            <div class="card">
+                <img src="img/caixa-registradora.png" alt="Frente de Caixa">
+                <h2>Frente de Caixa</h2>
+                <p>Para realizar vendas e cobranças no balcão do seu negócio</p>
+            </div>
+            <div class="card">
+                <img src="img/estoque.png" alt="Suprimentos">
+                <h2>Suprimentos</h2>
+                <p>Para coordenar os produtos do seu estoque</p>
+            </div>
+            <div class="card">
+                <img src="img/moedas.png" alt="Frente de Caixa">
+                <h2>Frente de Caixa</h2>
+                <p>Para descomplicar seu fluxo de caixa e analisar informações</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="main-footer">
+            <div id="footer_subscrive">
+                <div id="input_group">
+                    <p style="font-weight: bold; margin-right: 20px; text-align: center;">ENVIE UM EMAIL EM CASO DE DUVIDAS: </p>
+                    <input type="email" id="email" style="border-radius: 2vh; border: #fff; margin-left: 40vh;">
+                    <button style="width: 30px; border-radius: 1vh; border: #fff; margin-right: 40vh;">
+                        <img src="img/envelope.png" alt="" style="width: 20px; height: 22px;">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
