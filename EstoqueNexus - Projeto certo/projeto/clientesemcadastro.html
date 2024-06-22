@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+    
+        .header img {
+            height: 40px;
+        }
+        .header div {
+            background-color: #e0e0e0;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+        .main {
+            padding: 50px 20px;
+        }
+        .main h1 {
+            font-size: 35px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 3rem;
+    margin-left: 9rem;
+    margin-right: 8rem;
+    margin-bottom: 20px;
+    color: #043741;
+        }
+        .main p {
+            color: #333;
+            font-size: 18px;
+        }
+        .main .icon {
+            font-size: 100px;
+            color: #333;
+        }
+        .main .description {
+            color: #043741;
+            font-size: 22px;
+            margin: 20px 0 10px;
+        }
+        .main .note {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        .main .btn {
+            background-color: #007d8a;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .main .btn:hover {
+            background-color:  #df8014;
+        }
+        .icon-row {
+            
+            margin-right: 60rem;
+        }
+        .icon-row .material-icons {
+            font-size: 0px;
+            color: #333;
+            margin: 0 10px;
+        }
+
+         /*menu*/
+header{
+    background-color: #007d8a;
+    box-shadow: 0px 3px 10px #464646;
+}
+ 
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    padding-bottom: 10px;
+}
+    .logo{
+    display: flex;
+    align-items: center;
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item{
+    margin: 0 15px;
+
+
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.20rem;
+    color: #fff;
+    font-weight: bold;
+    
+}
+
+
+.login-button button{
+    border: none;
+    background-color: #F5F5F5;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 1rem;
+
+}
+
+.login-button button a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.mobile-menu-icon{
+    display:none;
+}
+
+.mobile-menu{
+    display:none;
+}
+.nav-link:hover {
+    color: #fff;
+}
+
+.dropdown-menu a:hover {
+    background-color: #005f6a;
+    color: #fff;
+}
+
+.content button:hover {
+    background-color: #005f6a;
+    color: white;
+}
+
+.button-group button:hover {
+    background-color: #005f6a;
+    color: white;
+}
+
+
+.dropdown-menu{
+    position: absolute;
+    box-shadow: 0 0 2px black;
+    display: none;
+    background-color: #c5b8b8;
+    border: 2px black;
+    
+
+}
+.dropdown-menu a{
+    display: block;
+
+}
+nav li a {
+    display: inline-block;
+    padding: 15px;
+    
+}
+
+.nav-item:hover .dropdown-menu{
+    display: block;
+
+}
+
+
+
+
+
+.main-footer{
+    background-color: #007d8a;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+
+        
+        @media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item{
+        display: none;
+    }
+    .login-button{
+        display: none;
+    }
+    .mobile-menu-icon{
+        display: block
+    }
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul{
+        display: flex;
+        text-align: center;
+        padding-bottom: 1rem;
+        flex-direction: column;
+
+    }
+    .mobile-menu .nav-item{
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button{
+        display: block;
+        padding-top: 1rem 2rem;
+    }
+    .mobile-menu .login-button button{
+        width: 100%;
+    }
+    .open{
+        display: block;
+    }
+    .card{
+        margin-left: 7rem;
+    }
+    h1{
+        text-align: center;
+        margin-left: 1rem;
+        margin-right: 1rem;
+
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img/logo2.png" alt="" style="width: 150px; height: 40px;">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    <li class="nav-item"> <a href="" class="nav-link">Cadastro</a>
+                    <div class="dropdown-menu">
+                         <a href="produtosemcadastro.html" class="nav-link">Produtos</a>
+                         <a href="clientesemcadastro.html" class="nav-link">Clientes <br>e Fornecedores</a>
+                     </div>
+                    </li>
+                    <li class="nav-item"> <a href="#" class="nav-link">Controle</a>
+                        <div class="dropdown-menu">
+                            <a href="controledeestoque.html" class="nav-link">Estoque</a>
+                            <a href="controledecaixa.html" class="nav-link">Caixa</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"> <a href="caixa.html" class="nav-link"> Fluxo de Caixa</a></li>
+                </ul>
+            </div>
+            <div class="login-button">
+                <button><a href="login.html">Entrar</a></button>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+             <ul>
+                    <li class="nav-item"> <a href="produtosemcadastro.html" class="nav-link">Produtos</a></li>
+                    <li class="nav-item"> <a href="clientesemcadastro.html" class="nav-link">Clientes e Fornecedores </a></li>
+                    <li class="nav-item"> <a href="caixa.html" class="nav-link">Fluxo de caixa</a></li>
+                    <li class="nav-item"> <a href="controledeestoque.html" class="nav-link">Controle de estoque</a></li>
+                    <li class="nav-item"> <a href="controledeestoque.html" class="nav-link">Controle de caixa</a></li>
+            </ul>
+            <div class="login-button">
+                <button><a href="login.html">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="icon-row">
+            <span class="material-icons">search</span>
+            <span class="material-icons">event</span>
+            <span class="material-icons">delete</span>
+        </div>
+        <h1>CLIENTES E FORNECEDORES</h1>
+       
+        <span class="material-icons icon">description</span>
+        <p class="description">NENHUM CADASTRO REGISTRADO</p>
+        <p class="note">Ainda não existem cadastros no seu sistema, comece agora clicando em incluir cadastro.</p>
+        <a href="cliente.html" class="btn">+ Incluir cadastro</a>
+    </div>
+
+    <footer>
+        <div class="main-footer" style="margin-top: 20vh;">
+    
+                    <p style="font-weight: bold; margin-right: 20px; text-align: center;">© 2024 Estoque Nexus. Todos os direitos reservados.</p>
+                   
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

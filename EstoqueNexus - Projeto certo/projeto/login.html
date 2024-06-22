@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagína de Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+    --primary-color: #ffffff;
+    --background-color: #f0f0f0;
+    --text-color: #000000;
+    --button-background: #18A8C3; 
+    --button-text: #ffffff;
+}
+
+body.dark-mode {
+    --primary-color: #333333;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-background: #666666;
+    --button-text: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-label {
+    cursor: pointer;
+    background: var(--button-background);
+    color: var(--button-text);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.login-card {
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.login-info {
+    padding: 20px;
+    border-right: 2px solid var(--background-color);
+    flex: 1;
+}
+
+.login-form {
+    padding: 20px;
+    flex: 1;
+}
+
+.login-info h2, .login-form h2 {
+    margin: 0 0 20px;
+    font-size: 24px;
+}
+
+.login-info p {
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.textbox {
+    margin-bottom: 20px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    background: none;
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.btn {
+    background-color: var(--button-background);
+    color: var(--button-text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: darken(var(--button-background), 10%);
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle-dark-mode">
+            <label for="toggle-dark-mode" class="toggle-label">
+                Modo Escuro
+            </label>
+        </div>
+        <div class="login-card">
+            <div class="login-info">
+                <h2 style="color: #18A8C3;">Bem vindo ao Estoque Nexus! </h2>
+                <p>Por favor coloque os dados necessários para voltar a organização. </p>
+                
+            </div>
+            <div class="login-form">
+                <h2 style="color: #18A8C3;">Login</h2>
+                <form>
+                    <div class="textbox">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="textbox">
+                        <input type="password" placeholder="Senha" required
+                        minlength="6"
+                        maxlength="16"
+                        size="16">
+                        <p> <em><u><a href="senha.html" target="_blank">Esqueci a Senha</a></u> </em></p>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+                <p> <em><u><a href="cadastro.html" >Não possui uma conta? inscreva-se </a></u> </em></p>
+            </div>
+        </div>
+    </div>
+    <script> document.getElementById('toggle-dark-mode').addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode', this.checked);
+    });</script>
+</body>
+</html>

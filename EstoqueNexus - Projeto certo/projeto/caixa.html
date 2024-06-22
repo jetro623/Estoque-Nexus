@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Inter", sans-serif;
+        }
+
+        header {
+            background-color: #007d8a;
+            box-shadow: 0px 3px 10px #464646;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            position: relative; 
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            color: #fff;
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .nav-list ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            position: relative;
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            font-size: 1.20rem;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+    box-shadow: 0 0 2px black;
+    display: none;
+    background-color: #c5b8b8;
+    border: 2px black;
+        }
+
+        .dropdown-menu a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #005f6a;
+            color: #fff;
+        }
+
+        .nav-item:hover .dropdown-menu {
+            display: block;
+        }
+
+        .mobile-menu-icon {
+            display: none;
+        }
+
+        .hamburger {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            margin-left: auto;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+        }
+
+        .dropdown-container {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            display: none;
+            background-color: #007d8a;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown-container a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-container a:hover {
+            background-color: #005f6a;
+            color: #fff;
+        }
+
+        @media screen and (max-width: 730px) {
+            .nav-item {
+                display: none;
+            }
+
+            .mobile-menu-icon {
+                display: block;
+            }
+
+            .mobile-menu-icon button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .mobile-menu ul {
+                display: flex;
+                text-align: center;
+                padding-bottom: 1rem;
+                flex-direction: column;
+            }
+
+            .mobile-menu .nav-item {
+                display: block;
+                padding-top: 1.2rem;
+            }
+
+            .mobile-menu .login-button {
+                display: block;
+                padding-top: 1rem 2rem;
+            }
+
+            .mobile-menu .login-button button {
+                width: 100%;
+            }
+
+            .open {
+                display: block;
+            }
+        }
+
+        .main-footer {
+            background-color: #007d8a;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .content h2 {
+            color: #007d8a;
+            margin-bottom: 1rem;
+        }
+
+        .content input, .content select, .content button {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .content button {
+            background-color: #007d8a;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .content button:hover {
+            background-color: #005f6a;
+            color: white;
+        }
+
+        .product-image-container {
+            border: 1px solid #ccc;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: auto;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem; 
+        }
+
+        .button-group button {
+            width: auto; 
+            flex: 1;
+            background-color: #007d8a;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .button-group button:hover {
+            background-color: #005f6a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <img src="img/logo2.png" alt="" style="width: 150px; height: 40px;">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cadastro</a>
+                        <div class="dropdown-menu">
+                            <a href="produtosemcadastro.html" class="nav-link">Produtos</a>
+                            <a href="clientesemcadastro.html" class="nav-link">Clientes e Fornecedores</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Controle</a>
+                        <div class="dropdown-menu">
+                            <a href="controledeestoque.html" class="nav-link">Estoque</a>
+                            <a href="controledecaixa.html" class="nav-link">Caixa</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="hamburger" onclick="toggleDropdown()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="dropdown-container" id="dropdown">
+                <a href="sangria.html" class="nav-link">Sangria</a>
+                <a href="suprimento.html" class="nav-link">Suprimento</a>
+                <a href="fecharcaixa.html" class="nav-link">Fechar caixa</a>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/menu_white_36dp.svg" alt=""></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="produtosemcadastro.html" class="nav-link">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="clientesemcadastro.html" class="nav-link">Clientes e Fornecedores</a>
+                </li>
+                <li class="nav-item">
+                    <a href="caixa.html" class="nav-link">Fluxo de caixa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="controledeestoque.html" class="nav-link">Controle de estoque</a>
+                </li>
+                <li class="nav-item">
+                    <a href="controledecaixa.html" class="nav-link">Controle de caixa</a>
+                </li>
+            </ul>
+            <div class="login-button">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <h2>Venda</h2>
+        <div class="button-group">
+            <button><a href="abrircaixa.html" class="nav-link">Abrir Caixa</a></button>
+            <button><a href="caixa.html" class="nav-link">Nova Venda</a></button>
+        </div>
+        <input type="text" placeholder="Pesquisa por código">
+        <div style="display: flex; align-items: flex-start;">
+            <div style="flex: 1;">
+                <button>Camisa do Santos</button>
+                <div class="product-image-container" style="border: none;">
+                    <img src="https://acdn.mitiendanube.com/stores/001/436/693/products/ab29eb82_compress331-882e9c0f03791d0cdb16386028733645-1024-1024.jpg" alt="Imagem do Produto" style="width: 40vh; height: 40vh;">
+                </div>
+            </div>
+            <div style="flex: 2; padding: 1rem;">
+                <div style="display: flex; justify-content: space-between;">
+                    <input type="number" placeholder="Quantidade">
+                    <input type="number" placeholder="Desconto" value="0,00">
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <input type="number" placeholder="Valor unitário" value="0,00">
+                    <input type="number" placeholder="Sub Total" value="0,00">
+                </div>
+                <input type="text" placeholder="Código do cliente">
+                <input type="text" placeholder="Forma de Pagamento">
+                <div style="display: flex; justify-content: space-between;">
+                    <input type="number" placeholder="Troco em dinheiro" value="0,00">
+                    <input type="number" placeholder="Total recebido em dinheiro" value="0,00">
+                </div>
+                <button >Finalizar Venda</button>
+                <button>Adicionar Produto</button>
+            </div>
+        </div>
+    </main>
+    <footer class="main-footer">
+        <p>© 2024 Estoque Nexus. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function menuShow() {
+            let mobileMenu = document.querySelector('.mobile-menu');
+            if (mobileMenu.classList.contains('open')) {
+                mobileMenu.classList.remove('open');
+            } else {
+                mobileMenu.classList.add('open');
+            }
+        }
+        function toggleDropdown() {
+            let dropdown = document.getElementById('dropdown');
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
